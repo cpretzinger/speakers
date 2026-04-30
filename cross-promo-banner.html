@@ -1,0 +1,223 @@
+<!--
+  ============================================================
+  Insurance Dudes — Speaker Page Cross-Promo Banner
+  ============================================================
+
+  Drop-in snippet to promote speakers.theidudes.com on any
+  Insurance Dudes web property.
+
+  HOW TO USE:
+  1. Copy one or both variants below into the target page.
+  2. Each variant is fully self-contained (inline <style> block).
+  3. All class names are prefixed with "id-speaker-promo-" to
+     avoid collisions with host-site styles.
+
+  VARIANT A — Sticky top banner (promo strip)
+    Paste just inside <body> at the very top.
+
+  VARIANT B — Sidebar / footer widget card
+    Paste into any sidebar, footer, or content column.
+
+  No external fonts, scripts, or stylesheets required.
+  ============================================================
+-->
+
+
+<!-- ========================================================
+     VARIANT A: STICKY TOP BANNER (promo strip)
+     Paste this block just inside <body>.
+     ======================================================== -->
+
+<style>
+  /* --- Variant A: Sticky top banner --- */
+  .id-speaker-promo-topbar {
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    background: #0b1e3f;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 10px 16px;
+    text-align: center;
+    border-bottom: 2px solid #f7c80c;
+    box-sizing: border-box;
+  }
+
+  .id-speaker-promo-topbar * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .id-speaker-promo-topbar-text {
+    color: #ffffff;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+
+  .id-speaker-promo-topbar-emoji {
+    font-size: 16px;
+  }
+
+  .id-speaker-promo-topbar-link {
+    display: inline-block;
+    color: #0b1e3f;
+    background: #f7c80c;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 4px 14px;
+    border-radius: 4px;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    transition: background 0.2s ease, transform 0.15s ease;
+    white-space: nowrap;
+  }
+
+  .id-speaker-promo-topbar-link:hover {
+    background: #ffe14d;
+    transform: translateY(-1px);
+  }
+
+  .id-speaker-promo-topbar-close {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.5);
+    font-size: 18px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 4px;
+  }
+
+  .id-speaker-promo-topbar-close:hover {
+    color: #ffffff;
+  }
+
+  @media (max-width: 480px) {
+    .id-speaker-promo-topbar {
+      font-size: 13px;
+      padding: 8px 36px 8px 12px;
+      gap: 6px;
+    }
+  }
+</style>
+
+<div class="id-speaker-promo-topbar" id="id-speaker-promo-topbar">
+  <span class="id-speaker-promo-topbar-text">
+    <span class="id-speaker-promo-topbar-emoji">&#127908;</span>
+    Book Craig &amp; Jason for your next event &mdash;
+  </span>
+  <a class="id-speaker-promo-topbar-link" href="https://speakers.theidudes.com" target="_blank" rel="noopener">
+    Learn More &rarr;
+  </a>
+  <button
+    class="id-speaker-promo-topbar-close"
+    aria-label="Dismiss banner"
+    onclick="document.getElementById('id-speaker-promo-topbar').style.display='none';"
+  >&times;</button>
+</div>
+
+
+<!-- ========================================================
+     VARIANT B: SIDEBAR / FOOTER WIDGET CARD
+     Paste this block into any sidebar, footer, or column.
+     ======================================================== -->
+
+<style>
+  /* --- Variant B: Sidebar / footer widget --- */
+  .id-speaker-promo-card {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #0b1e3f;
+    border: 1px solid rgba(247, 200, 12, 0.25);
+    border-radius: 10px;
+    padding: 24px;
+    max-width: 360px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .id-speaker-promo-card * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .id-speaker-promo-card-badge {
+    display: inline-block;
+    background: rgba(247, 200, 12, 0.12);
+    color: #f7c80c;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 14px;
+  }
+
+  .id-speaker-promo-card-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+
+  .id-speaker-promo-card-desc {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+    margin-bottom: 18px;
+  }
+
+  .id-speaker-promo-card-btn {
+    display: inline-block;
+    background: #f7c80c;
+    color: #0b1e3f;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 10px 28px;
+    border-radius: 6px;
+    transition: background 0.2s ease, transform 0.15s ease;
+    letter-spacing: 0.02em;
+  }
+
+  .id-speaker-promo-card-btn:hover {
+    background: #ffe14d;
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 480px) {
+    .id-speaker-promo-card {
+      max-width: 100%;
+      padding: 20px 16px;
+    }
+  }
+</style>
+
+<div class="id-speaker-promo-card">
+  <div class="id-speaker-promo-card-badge">&#127908; Now Booking</div>
+  <div class="id-speaker-promo-card-title">
+    Craig Pretzinger &amp; Jason Feltman
+  </div>
+  <p class="id-speaker-promo-card-desc">
+    Hosts of <em>The Insurance Dudes</em> &mdash; speaking on AI, automation,
+    and the future of P&amp;C insurance. Keynotes, panels &amp; workshops.
+  </p>
+  <a class="id-speaker-promo-card-btn" href="https://speakers.theidudes.com" target="_blank" rel="noopener">
+    Book Now &rarr;
+  </a>
+</div>
